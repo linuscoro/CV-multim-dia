@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="contenidorHead">
+            <h1 class="logo">MARCEL·LÍ COROMINAS PRATS</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">ABOUT ME</a></li>
+                    <li><a href="#experience">EXPERIENCE</a></li>
+                    <li><a href="#education">EDUCATION</a></li>
+                    <li><a href="#skills">SKILLS</a></li>
+                    <li><a href="#contact">CONTACT ME</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div>
+        <section id="about" class="section-about">
+            <h2 class="titolAbout">ABOUT ME</h2> 
+            <div class="contenidorAbout">
+                <div class="foto-wrapper">
+                    <div class="foto"></div>
+                </div>
+                <div class="info">
+                    <h3>WHO AM I:</h3>
+                    <p>My name is Marcel·lí Corominas, I'm 19 years old and I live in Banyoles.</p>
+                    <p>I am a third year student of the Computer Engineering degree, with a strong interest in programming and cybersecurity.</p>
+                    
+                    <h3>WHAT I BRING TO THE TABLE:</h3>
+                    <p>I am diligent, motivated and adaptable, with the ability to work well in a team.</p>
+                    <p>I understand and empathize with others, making collaboration smooth and effective. I am goal-oriented and strategic in achieving objectives.</p>
+                    
+                    <h3>MY PASSIONS AND INTERESTS:</h3>
+                    <p>Beyond my academic and professional pursuits, I am deeply passionate about cybersecurity and pentesting.</p>
+                    <p>In my free time, I enjoy staying active through canoeing and practicing jiujitsu, helping me to stay focused when I'm working.</p>
+                    <p>Music is another important part of my life. I love listening to music and mixing tracks as a DJ.</p>
+                </div>
+            </div>
+        </section>
+        <section id="experience" class="section-experience">
+            <h2>PROFESSIONAL EXPERIENCE</h2>
+            <div class="contenidorExperience">
+                
+                <div class="experience-card">
+                    <div class="background-image" style="background-image: url('mitec.jpg');"></div>
+                    <div class="experience-content">
+                        <h3>MITEC ENGINY</h3>
+                        <h4>DEPARTMENT OF COMPUTER SCIENCE</h4>
+                        <ul>
+                            <li>Developed and maintained a comprehensive Windows application to monitor and manage the operation, performance, and alerts of automation machines.</li>
+                            <li>Implemented both front-end and back-end development using C#, integrating Azure services and MySQL to enhance functionality and data management.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="background-image" style="background-image: url('cocunat.jpg');"></div>
+                    <div class="experience-content">
+                        <h3>COCUNAT S.L.</h3>
+                        <h4>INTERNSHIP IN THE DEPARTMENT OF COMPUTER SCIENCE</h4>
+                        <ul>
+                            <li>Front-end web development programming.</li>
+                            <li>Programming new features in existing processes using Python.</li>
+                            <li>Testing artificial intelligence for generating new web content.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-card">
+                    <div class="background-image" style="background-image: url('dragonboat.jpg');"></div>
+                    <div class="experience-content">
+                        <h3>DRAGON BOAT EMOTIONS</h3>
+                        <h4>DRAGON BOAT INSTRUCTOR</h4>
+                        <p>Dragon Boat instructor for corporate and student groups.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="education" class="section-education">
+            <h2>EDUCATION</h2>
+            <div class="contenidorEducation">
+                
+                
+                <div class="education-item">
+                    <div class="education-columns">
+                        <div class="education-content">
+                            <h3>BACHELOR'S DEGREE IN COMPUTER SCIENCE</h3>
+                            <p>Universitat de Girona - 09/2022 · now</p>
+                        </div>
+                        <div class="education-image" style="background-image: url('udg.jpg');"></div>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-columns">
+                        <div class="education-content">
+                            <h3>TECHNOLOGICAL BACCALAUREATE</h3>
+                            <p>Institut Josep Brugulat, Banyoles - 09/2020 · 06/2022</p>
+                        </div>
+                        <div class="education-image" style="background-image: url('brugulat.jpg');"></div>
+                    </div>
+                </div>
+        
+                <div class="education-item">
+                    <div class="education-columns">
+                        <div class="education-content">
+                            <h3>RESEARCH PROJECT ON MALWARE</h3>
+                            <p>Institut Josep Brugulat, Banyoles - 03/2021 · 03/2022</p>
+                        </div>
+                        <div class="education-image" style="background-image: url('tdr.JPG');"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section id="skills" class="section-skills">
+            <h2>HABILITIES</h2>
+            <div class="skills-tabs">
+                <button id="codingButton" class="skills-tab active" onclick="showSkills('coding')">CODING</button>
+                <button id="languagesButton" class="skills-tab" onclick="showSkills('languages')">LANGUAGES</button>
+            </div>
+        
+            <div id="codingSkills" class="skills-content show">
+                <div class="skill">
+                    <span>C++</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="65%" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>C#</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="75%" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>PYTHON</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="50%" style="width: 50%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>HTML/CSS</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="75%" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>SQL</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="85%" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>JAVA</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="60%" style="width: 60%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>PHP</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="20%" style="width: 20%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>JAVASCRIPT</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="40%" style="width: 40%;"></div>
+                    </div>
+                </div>
+
+                
+            </div>
+        
+            <div id="languageSkills" class="skills-content">
+                <div class="skill">
+                    <span>CATALAN</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="100%" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>SPANISH</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="100%" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>ENGLISH (B2)</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="75%" style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>FRENCH</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="15%" style="width: 15%;"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>GERMAN</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" data-width="20%" style="width: 20%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section-contact">
+            <h2>CONTACT ME</h2>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/linuscoro" target="_blank" class="social-icon instagram" aria-label="Instagram"></a>
+                <a href="https://github.com/linuscoro" target="_blank" class="social-icon github" aria-label="GitHub"></a>
+                <a href="https://www.linkedin.com/in/marcel-lí-corominas-prats-3581ba338" target="_blank" class="social-icon linkedin" aria-label="LinkedIn"></a>
+                <a href="mailto:linuscoro@gmail.com" class="social-icon gmail" aria-label="Gmail"></a>
+            </div>
+        
+            <div class="contact-container">
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <p><a href="tel:+640601564">+640 60 15 64</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p><a href="mailto:linuscoro@gmail.com">linuscoro@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Location</h3>
+                    <p>Av. Països Catalans, 58
+                        17820 Banyoles-Girona
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
