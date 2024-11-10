@@ -16,6 +16,7 @@ body {
     transform-origin: center; 
 }
 
+
 /* Elimina el transform: scale() en les resolucions per evitar reduccions no desitjades */
 @media (max-width: 1200px) {
     body {
@@ -47,42 +48,88 @@ body {
     }
 }
 
-/* Ajusta la secció de Contact per resolucions més petites */
+/* Ajustos per evitar solapaments en Skills i Contact en resolucions més petites */
+
 @media (max-width: 1024px) {
+    .section-skills,
     .section-contact {
         padding: 2em 1em;
     }
 
+    .section-skills h2,
     .section-contact h2 {
         font-size: 2em; /* Redueix la mida del títol */
     }
 
+    .skills-tabs {
+        flex-direction: column; /* Col·loca els botons en columna en pantalles petites */
+        width: 100%;
+    }
+
+    .skills-tab {
+        font-size: 1.2em;
+        padding: 0.5em;
+    }
+
+    .skills-content {
+        width: 100%; /* Amplada completa per evitar desbordaments */
+    }
+
+    .skill-bar {
+        height: 25px; /* Redueix l'altura de les barres de habilitats */
+    }
+
     .contact-container {
         width: 90%; /* Redueix l'amplada */
-        max-width: 500px; /* Ajusta l'amplada màxima per pantalles més petites */
+        max-width: 500px;
     }
 
     .contact-item {
-        padding: 0.8em 1em; /* Redueix el padding per evitar solapaments */
+        padding: 0.8em 1em; /* Redueix el padding */
     }
 
     .contact-item h3 {
-        font-size: 1.3em; /* Redueix lleugerament la mida dels subtítols */
+        font-size: 1.3em;
     }
 
     .contact-item p {
-        font-size: 1em; /* Redueix la mida del text per mantenir-lo dins dels marges */
+        font-size: 1em;
     }
 }
 
 /* Ajustaments per pantalles més petites (portàtils petits i mòbils) */
 @media (max-width: 768px) {
+    .section-skills,
     .section-contact {
         padding: 1.5em 1em;
     }
 
+    .section-skills h2,
     .section-contact h2 {
         font-size: 1.8em;
+    }
+
+    .skills-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-content {
+        width: 100%;
+        padding: 1em;
+    }
+
+    .skill {
+        flex-direction: column; /* Col·loca les habilitats en columna */
+        align-items: flex-start;
+    }
+
+    .skill span {
+        font-size: 1.5em; /* Redueix la mida del text */
+    }
+
+    .skill-bar {
+        height: 20px; /* Redueix encara més l'altura */
     }
 
     .contact-container {
@@ -103,14 +150,57 @@ body {
     }
 
     .social-icons {
-        gap: 1em; /* Redueix l'espai entre icones */
+        gap: 0.8em; /* Redueix l'espai entre icones */
     }
 
     .social-icon {
-        width: 40px;
-        height: 40px; /* Redueix la mida de les icones socials */
+        width: 35px;
+        height: 35px; /* Redueix la mida de les icones socials */
     }
 }
+
+/* Ajustaments per pantalles molt petites (mòbils petits) */
+@media (max-width: 576px) {
+    .section-skills,
+    .section-contact {
+        padding: 1em 0.5em;
+    }
+
+    .section-skills h2,
+    .section-contact h2 {
+        font-size: 1.5em;
+    }
+
+    .skills-tab {
+        font-size: 1em;
+    }
+
+    .skill span {
+        font-size: 1.2em;
+    }
+
+    .skill-bar {
+        height: 15px;
+    }
+
+    .contact-item {
+        padding: 0.5em 0.5em;
+    }
+
+    .contact-item h3 {
+        font-size: 1em;
+    }
+
+    .contact-item p {
+        font-size: 0.8em;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 
 
 header {
