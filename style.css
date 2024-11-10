@@ -16,55 +16,77 @@ body {
     transform-origin: center; 
 }
 
-/* Resolució per a tablets (pantalles mitjanes) */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .contenidorAbout,
     .contenidorExperience,
     .contenidorEducation,
     .skills-content {
-        flex-direction: column;
+        flex-direction: column; /* Canvia a una disposició en columnes */
+        gap: 1em;
         align-items: center;
         padding: 1em;
-        width: 90%; /* Redueix l'amplada */
-        margin: 0 auto;
     }
 
-    .contenidorExperience, .contenidorEducation, .contenidorAbout {
-        gap: 1em;
-    }
-    
-    .experience-card,
-    .education-item {
-        width: 100%;
-        margin: 1em auto;
-    }
-
-    .skills-tabs {
+    .education-columns, .contenidorExperience, .experience-card, .education-item {
         flex-direction: column;
         width: 100%;
     }
-
-    .skills-tab {
-        font-size: 1.2em;
-        padding: 0.5em;
+    
+    .education-item,
+    .experience-card {
+        width: 90%;
+        margin: 1em auto;
+    }
+    
+    .section-about .foto-wrapper {
+        margin-top: 2em;
+        width: 100%; /* Ajusta l'amplada per mantenir la proporció en pantalles petites */
+        height: auto;
+    }
+    
+    .section-about .foto {
+        width: 100%; /* Que ocupi el 100% de l'ample disponible */
+        height: auto;
     }
 
-    .education-image {
-        height: 100px; /* Redueix l'altura per a pantalles mitjanes */
+    .contenidorAbout, .contenidorExperience, .contenidorEducation {
+        width: 90%;
+    }
+
+    .section-about h2,
+    .section-experience h2,
+    .section-education h2,
+    .section-skills h2,
+    .section-contact h2 {
+        font-size: 2em;
+        padding: 0.5em;
+    }
+    
+    .info h3 {
+        font-size: 1.5em;
+    }
+    
+    .info p, .experience-card h3, .education-content h3 {
+        font-size: 1.2em;
+    }
+    
+    .experience-content, .education-content, .skill-bar {
+        font-size: 1em;
     }
 }
 
-/* Resolució per a mòbils (pantalles petites) */
-@media (max-width: 576px) {
-    .contenidorHead,
-    nav ul {
-        flex-direction: column;
-        gap: 0.5em;
-        align-items: center;
-    }
+.section-about,
+.section-experience,
+.section-skills,
+.section-education,
+.section-contact {
+    min-height: auto; /* Ajusta automàticament segons el contingut */
+    padding: 1em; /* Redueix els espais interiors */
+}
 
+@media (max-width: 576px) {
     nav ul li {
-        margin-left: 0;
+        margin-left: 1.5em;
     }
 
     nav ul li a {
@@ -73,7 +95,6 @@ body {
 
     .social-icons {
         gap: 1em;
-        justify-content: center;
     }
 
     .social-icon {
@@ -81,73 +102,11 @@ body {
         height: 40px;
     }
 
-    .contenidorAbout,
-    .contenidorExperience,
-    .contenidorEducation,
-    .skills-content {
-        width: 100%;
-        padding: 1em;
-    }
-
-    .section-about h2,
-    .section-experience h2,
-    .section-education h2,
-    .section-skills h2,
-    .section-contact h2 {
+    h2 {
         font-size: 1.5em;
         margin: 0.5em 0;
-        text-align: center;
-    }
-
-    .education-image,
-    .background-image {
-        height: 80px; /* Redueix encara més l'altura per a mòbils */
-    }
-
-    .skill-bar {
-        height: 25px;
-    }
-
-    .skills-tab {
-        font-size: 1em;
-    }
-
-    .contact-container {
-        width: 100%;
-        padding: 1em;
     }
 }
-
-/* Ajustaments generals */
-.section-about,
-.section-experience,
-.section-skills,
-.section-education,
-.section-contact {
-    min-height: auto;
-    padding: 1em;
-}
-
-.experience-card, .education-item, .skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-    max-width: 600px;
-    width: 100%;
-}
-
-.contact-item {
-    width: 100%;
-    padding: 1em;
-}
-
 
 /*
 @media (max-width: 1200px) {
