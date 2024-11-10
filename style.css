@@ -13,9 +13,102 @@ body {
     background-color: #1D1D1D;
     color: #D99441;
     padding-top: 80px; 
-    transform-origin: top; 
+    transform-origin: center; 
 }
 
+@media (max-width: 768px) {
+    .contenidorAbout,
+    .contenidorExperience,
+    .contenidorEducation,
+    .skills-content {
+        flex-direction: column; /* Canvia a una disposició en columnes */
+        gap: 1em;
+        align-items: center;
+        padding: 1em;
+    }
+
+    .education-columns, .contenidorExperience, .experience-card, .education-item {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .education-item,
+    .experience-card {
+        width: 90%;
+        margin: 1em auto;
+    }
+    
+    .section-about .foto-wrapper {
+        margin-top: 2em;
+        width: 100%; /* Ajusta l'amplada per mantenir la proporció en pantalles petites */
+        height: auto;
+    }
+    
+    .section-about .foto {
+        width: 100%; /* Que ocupi el 100% de l'ample disponible */
+        height: auto;
+    }
+
+    .contenidorAbout, .contenidorExperience, .contenidorEducation {
+        width: 90%;
+    }
+
+    .section-about h2,
+    .section-experience h2,
+    .section-education h2,
+    .section-skills h2,
+    .section-contact h2 {
+        font-size: 2em;
+        padding: 0.5em;
+    }
+    
+    .info h3 {
+        font-size: 1.5em;
+    }
+    
+    .info p, .experience-card h3, .education-content h3 {
+        font-size: 1.2em;
+    }
+    
+    .experience-content, .education-content, .skill-bar {
+        font-size: 1em;
+    }
+}
+
+.section-about,
+.section-experience,
+.section-skills,
+.section-education,
+.section-contact {
+    min-height: auto; /* Ajusta automàticament segons el contingut */
+    padding: 1em; /* Redueix els espais interiors */
+}
+
+@media (max-width: 576px) {
+    nav ul li {
+        margin-left: 1.5em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    .social-icons {
+        gap: 1em;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        margin: 0.5em 0;
+    }
+}
+
+/*
 @media (max-width: 1200px) {
     body {
         transform: scale(0.9);
@@ -45,6 +138,8 @@ body {
         transform: scale(0.5);
     }
 }
+
+*/
 header {
     position: fixed; 
     top: 0; 
