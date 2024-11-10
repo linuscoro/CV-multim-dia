@@ -16,126 +16,99 @@ body {
     transform-origin: center; 
 }
 
-@media (max-width: 768px) {
-    .contenidorAbout,
-    .contenidorExperience,
-    .contenidorEducation,
-    .skills-content {
-        flex-direction: column; /* Canvia a una disposició en columnes */
-        gap: 1em;
-        align-items: center;
-        padding: 1em;
-    }
-
-    .education-columns, .contenidorExperience, .experience-card, .education-item {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .education-item,
-    .experience-card {
-        width: 90%;
-        margin: 1em auto;
-    }
-    
-    .section-about .foto-wrapper {
-        margin-top: 2em;
-        width: 100%; /* Ajusta l'amplada per mantenir la proporció en pantalles petites */
-        height: auto;
-    }
-    
-    .section-about .foto {
-        width: 100%; /* Que ocupi el 100% de l'ample disponible */
-        height: auto;
-    }
-
-    .contenidorAbout, .contenidorExperience, .contenidorEducation {
-        width: 90%;
-    }
-
-    .section-about h2,
-    .section-experience h2,
-    .section-education h2,
-    .section-skills h2,
-    .section-contact h2 {
-        font-size: 2em;
-        padding: 0.5em;
-    }
-    
-    .info h3 {
-        font-size: 1.5em;
-    }
-    
-    .info p, .experience-card h3, .education-content h3 {
-        font-size: 1.2em;
-    }
-    
-    .experience-content, .education-content, .skill-bar {
-        font-size: 1em;
-    }
-}
-
-.section-about,
-.section-experience,
-.section-skills,
-.section-education,
-.section-contact {
-    min-height: auto; /* Ajusta automàticament segons el contingut */
-    padding: 1em; /* Redueix els espais interiors */
-}
-
-@media (max-width: 576px) {
-    nav ul li {
-        margin-left: 1.5em;
-    }
-
-    nav ul li a {
-        font-size: 1em;
-    }
-
-    .social-icons {
-        gap: 1em;
-    }
-
-    .social-icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    h2 {
-        font-size: 1.5em;
-        margin: 0.5em 0;
-    }
-}
-
-
+/* Elimina el transform: scale() en les resolucions per evitar reduccions no desitjades */
 @media (max-width: 1200px) {
     body {
-        transform: scale(0.9);
+        transform: none; /* Elimina el scale */
     }
 }
 
 @media (max-width: 992px) {
     body {
-        transform: scale(0.8);
+        transform: none; /* Elimina el scale */
     }
 }
 
 @media (max-width: 768px) {
     body {
-        transform: scale(0.7);
+        transform: none; /* Elimina el scale */
     }
 }
 
 @media (max-width: 576px) {
     body {
-        transform: scale(0.6);
+        transform: none; /* Elimina el scale */
     }
 }
 
 @media (max-width: 400px) {
     body {
-        transform: scale(0.5);
+        transform: none; /* Elimina el scale */
+    }
+}
+
+/* Ajusta la secció de Contact per resolucions més petites */
+@media (max-width: 1024px) {
+    .section-contact {
+        padding: 2em 1em;
+    }
+
+    .section-contact h2 {
+        font-size: 2em; /* Redueix la mida del títol */
+    }
+
+    .contact-container {
+        width: 90%; /* Redueix l'amplada */
+        max-width: 500px; /* Ajusta l'amplada màxima per pantalles més petites */
+    }
+
+    .contact-item {
+        padding: 0.8em 1em; /* Redueix el padding per evitar solapaments */
+    }
+
+    .contact-item h3 {
+        font-size: 1.3em; /* Redueix lleugerament la mida dels subtítols */
+    }
+
+    .contact-item p {
+        font-size: 1em; /* Redueix la mida del text per mantenir-lo dins dels marges */
+    }
+}
+
+/* Ajustaments per pantalles més petites (portàtils petits i mòbils) */
+@media (max-width: 768px) {
+    .section-contact {
+        padding: 1.5em 1em;
+    }
+
+    .section-contact h2 {
+        font-size: 1.8em;
+    }
+
+    .contact-container {
+        width: 100%;
+        padding: 1em;
+    }
+
+    .contact-item {
+        padding: 0.5em 0.8em;
+    }
+
+    .contact-item h3 {
+        font-size: 1.2em;
+    }
+
+    .contact-item p {
+        font-size: 0.9em;
+    }
+
+    .social-icons {
+        gap: 1em; /* Redueix l'espai entre icones */
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px; /* Redueix la mida de les icones socials */
     }
 }
 
